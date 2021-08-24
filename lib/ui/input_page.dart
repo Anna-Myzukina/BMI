@@ -36,7 +36,7 @@ class _InputPageState extends State<InputPage> {
               TopContainer(
                 gender: 'Female',
                 color: Colors.cyan,
-                boxColor: Colors.white,
+            
               ),
               // Male
               // Expanded(

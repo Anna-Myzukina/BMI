@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class TopContainer extends StatefulWidget {
   final String gender;
   final Color color;
-
   final bool colr;
   const TopContainer({
     Key? key,
@@ -17,17 +16,15 @@ class TopContainer extends StatefulWidget {
 }
 
 class _TopContainerState extends State<TopContainer> {
+  bool active = false;
   @override
   Widget build(BuildContext context) {
-    bool active = false;
-
     return Container(
         child: Expanded(
       child: GestureDetector(
         onTap: () {
           setState(() {
-            print("Container tapped");
-            active = true;
+            active = !active;
           });
         },
         child: Container(
@@ -35,7 +32,7 @@ class _TopContainerState extends State<TopContainer> {
             child: Text(
               widget.gender,
               style: TextStyle(
-                color: active ? Colors.cyan : Colors.white,
+                color: active ? Colors.white : Colors.cyan,
                 fontSize: 20.0,
               ),
             ),

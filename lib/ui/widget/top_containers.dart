@@ -17,6 +17,7 @@ class TopContainer extends StatefulWidget {
 }
 
 class _TopContainerState extends State<TopContainer> {
+  bool active = false;
   @override
   Widget build(BuildContext context) {
     return Container(

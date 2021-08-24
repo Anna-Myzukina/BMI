@@ -40,7 +40,7 @@ class _InputPageState extends State<InputPage> {
                     child: TopContainer(
                       gender: 'Male',
                       color: Colors.white,
-                      active:active ,
+                      active: active,
                     )),
               ),
               Expanded(
@@ -53,7 +53,7 @@ class _InputPageState extends State<InputPage> {
                   child: TopContainer(
                     gender: 'Female',
                     color: Colors.cyan,
-                    active: !active,   
+                    active: !active,
                   ),
                 ),
               ),

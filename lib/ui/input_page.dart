@@ -7,6 +7,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  bool active = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,14 +30,32 @@ class _InputPageState extends State<InputPage> {
         Expanded(
           child: Row(
             children: [
-              TopContainer(
-                gender: 'Male',
-                color: Colors.white,
+              Expanded(
+                child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        active = !active;
+                      });
+                    },
+                    child: TopContainer(
+                      gender: 'Male',
+                      color: Colors.white,
+                      active:active ,
+                    )),
               ),
-              TopContainer(
-                gender: 'Female',
-                color: Colors.cyan,
-            
+              Expanded(
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      active = !active;
+                    });
+                  },
+                  child: TopContainer(
+                    gender: 'Female',
+                    color: Colors.cyan,
+                    active: !active,   
+                  ),
+                ),
               ),
               // Male
               // Expanded(

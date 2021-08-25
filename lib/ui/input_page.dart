@@ -1,3 +1,5 @@
+import 'package:bmi_calculator/ui/widget/height_container.dart';
+import 'package:bmi_calculator/ui/widget/middle_container.dart';
 import 'package:bmi_calculator/ui/widget/top_containers.dart';
 import 'package:flutter/material.dart';
 
@@ -29,137 +31,99 @@ class _InputPageState extends State<InputPage> {
         Expanded(
           child: Row(
             children: [
-              TopContainer(
-                gender: 'Male',
-                color: Colors.white,
+              Expanded(
+                child: Container(
+                  child: Center(
+                    child: Text(
+                      'Female',
+                      style: TextStyle(
+                        color: Colors.cyan,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ),
+                  height: 50.0,
+                  margin: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xff9eadb6),
+                        offset: const Offset(
+                          5.0,
+                          5.0,
+                        ),
+                        blurRadius: 10.0,
+                        spreadRadius: 2.0,
+                      ), //BoxShadow
+                      BoxShadow(
+                        color: Colors.white,
+                        offset: const Offset(-2.0, -2.0),
+                        blurRadius: 3.0,
+                        spreadRadius: 2.0,
+                      ), //BoxShadow
+                    ],
+                    color: Color(0xFFEDEDED),
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                ),
               ),
-              TopContainer(
-                gender: 'Female',
-                color: Colors.cyan,
-                boxColor: Colors.white,
+              //Male
+              Expanded(
+                child: Container(
+                  child: Center(
+                    child: Text(
+                      'Female',
+                      style: TextStyle(
+                        color: Colors.cyan,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ),
+                  height: 50.0,
+                  margin: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xff9eadb6),
+                        offset: const Offset(
+                          5.0,
+                          5.0,
+                        ),
+                        blurRadius: 10.0,
+                        spreadRadius: 2.0,
+                      ), //BoxShadow
+                      BoxShadow(
+                        color: Colors.white,
+                        offset: const Offset(-2.0, -2.0),
+                        blurRadius: 3.0,
+                        spreadRadius: 2.0,
+                      ), //BoxShadow
+                    ],
+                    color: Color(0xFFEDEDED),
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                ),
               ),
-              // Male
-              // Expanded(
-              //   child: Container(
-              //     child: Center(
-              //       child: Text(
-              //         'Female',
-              //         style: TextStyle(
-              //           color: Colors.cyan,
-              //           fontSize: 20.0,
-              //         ),
-              //       ),
-              //     ),
-              //     height: 50.0,
-              //     margin: EdgeInsets.all(10.0),
-              //     decoration: BoxDecoration(
-              //       boxShadow: [
-              //         BoxShadow(
-              //           color: Color(0xff9eadb6),
-              //           offset: const Offset(
-              //             5.0,
-              //             5.0,
-              //           ),
-              //           blurRadius: 10.0,
-              //           spreadRadius: 2.0,
-              //         ), //BoxShadow
-              //         BoxShadow(
-              //           color: Colors.white,
-              //           offset: const Offset(-2.0, -2.0),
-              //           blurRadius: 3.0,
-              //           spreadRadius: 2.0,
-              //         ), //BoxShadow
-              //       ],
-              //       color: Color(0xFFEDEDED),
-              //       borderRadius: BorderRadius.circular(15.0),
-              //     ),
-              //   ),
-              // ),
             ],
           ),
         ),
         Row(
           children: [
             Expanded(
-              child: Container(
-                height: 350.0,
-                margin: EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color(0xff9eadb6),
-                      offset: const Offset(
-                        5.0,
-                        5.0,
-                      ),
-                      blurRadius: 10.0,
-                      spreadRadius: 2.0,
-                    ), //BoxShadow
-                    BoxShadow(
-                      color: Colors.white,
-                      offset: const Offset(-2.0, -2.0),
-                      blurRadius: 3.0,
-                      spreadRadius: 2.0,
-                    ), //BoxShadow
-                  ],
-                  color: Color(0xFFEDEDED),
-                  borderRadius: BorderRadius.circular(15.0),
-                ),
-              ),
+              child: HeightContainer(),
             ),
             Expanded(
                 child: Column(
               children: [
-                Container(
-                  height: 170.0,
-                  margin: EdgeInsets.all(15.0),
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0xff9eadb6),
-                        offset: const Offset(
-                          5.0,
-                          5.0,
-                        ),
-                        blurRadius: 10.0,
-                        spreadRadius: 2.0,
-                      ), //BoxShadow
-                      BoxShadow(
-                        color: Colors.white,
-                        offset: const Offset(-2.0, -2.0),
-                        blurRadius: 3.0,
-                        spreadRadius: 2.0,
-                      ), //BoxShadow
-                    ],
-                    color: Color(0xFFEDEDED),
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                ),
-                Container(
-                  height: 170.0,
-                  margin: EdgeInsets.all(15.0),
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0xff9eadb6),
-                        offset: const Offset(
-                          5.0,
-                          5.0,
-                        ),
-                        blurRadius: 10.0,
-                        spreadRadius: 2.0,
-                      ), //BoxShadow
-                      BoxShadow(
-                        color: Colors.white,
-                        offset: const Offset(-2.0, -2.0),
-                        blurRadius: 3.0,
-                        spreadRadius: 2.0,
-                      ), //BoxShadow
-                    ],
-                    color: Color(0xFFEDEDED),
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                ),
+                MiddleContainer(
+                  title: 'Weight',
+                  value: 10,
+                ), //Weight
+
+                MiddleContainer(
+                  title: 'Age',
+                  value: 10,
+                ), //Age
               ],
             )),
           ],

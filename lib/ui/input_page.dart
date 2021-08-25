@@ -27,6 +27,7 @@ class _InputPageState extends State<InputPage> {
         ),
       ),
       body: Column(children: [
+        Icon(Icons.remove),
         Expanded(
           child: Row(
             children: [
